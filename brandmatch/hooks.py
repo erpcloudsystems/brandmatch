@@ -4,6 +4,95 @@ app_publisher = "Mansy"
 app_description = "Brand Match"
 app_email = "ahmedmansy265@gmail.com"
 app_license = "mit"
+
+doc_events = {
+		"Payment Entry": {
+		"before_insert": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.before_insert",
+		"after_insert": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.after_insert",
+		"onload": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.onload",
+		"before_validate": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.before_validate",
+		"validate": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.validate",
+		"on_submit": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.on_submit",
+		"on_cancel": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.on_cancel",
+		"on_update_after_submit": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.on_update_after_submit",
+		"before_save": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.before_save",
+		"before_cancel": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.before_cancel",
+		"on_update": "brandmatch.doctype_triggers.accounting.payment_entry.payment_entry.on_update",
+	},
+	"Purchase Invoice": {
+		"before_insert": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.before_insert",
+		"after_insert": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.after_insert",
+		"onload": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.onload",
+		"before_validate": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.before_validate",
+		"validate": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.validate",
+		"on_submit": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.on_submit",
+		"on_cancel": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.on_cancel",
+		"on_update_after_submit": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.on_update_after_submit",
+		"before_save": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.before_save",
+		"before_cancel": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.before_cancel",
+		"on_update": "brandmatch.doctype_triggers.accounting.purchase_invoice.purchase_invoice.on_update",
+	},
+	"Purchase Order": {
+		"before_insert": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.before_insert",
+		"after_insert": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.after_insert",
+		"onload": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.onload",
+		"before_validate": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.before_validate",
+		"validate": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.validate",
+		"on_submit": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.on_submit",
+		"on_cancel": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.on_cancel",
+		"on_update_after_submit": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.on_update_after_submit",
+		"before_save": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.before_save",
+		"before_cancel": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.before_cancel",
+		"on_update": "brandmatch.doctype_triggers.accounting.purchase_order.purchase_order.on_update",
+	},
+	"Sales Order": {
+		"before_insert": "brandmatch.doctype_triggers.selling.sales_order.sales_order.before_insert",
+		"after_insert": "brandmatch.doctype_triggers.selling.sales_order.sales_order.after_insert",
+		"onload": "brandmatch.doctype_triggers.selling.sales_order.sales_order.onload",
+		"before_validate": "brandmatch.doctype_triggers.selling.sales_order.sales_order.before_validate",
+		"validate": "brandmatch.doctype_triggers.selling.sales_order.sales_order.validate",
+		"on_submit": "brandmatch.doctype_triggers.selling.sales_order.sales_order.on_submit",
+		"on_cancel": "brandmatch.doctype_triggers.selling.sales_order.sales_order.on_cancel",
+		"on_update_after_submit": "brandmatch.doctype_triggers.selling.sales_order.sales_order.on_update_after_submit",
+		"before_save": "brandmatch.doctype_triggers.selling.sales_order.sales_order.before_save",
+		"before_cancel": "brandmatch.doctype_triggers.selling.sales_order.sales_order.before_cancel",
+		"on_update": "brandmatch.doctype_triggers.selling.sales_order.sales_order.on_update",
+	},
+	"Delivery Note": {
+		"before_insert": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.before_insert",
+		"after_insert": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.after_insert",
+		"onload": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.onload",
+		"before_validate": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.before_validate",
+		"validate": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.validate",
+		"on_submit": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.on_submit",
+		"on_cancel": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.on_cancel",
+		"on_update_after_submit": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.on_update_after_submit",
+		"before_save": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.before_save",
+		"before_cancel": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.before_cancel",
+		"on_update": "brandmatch.doctype_triggers.stock.delivery_note.delivery_note.on_update",
+	},
+	"Sales Invoice": {
+		"before_insert": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.before_insert",
+		"after_insert": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.after_insert",
+		"onload": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.onload",
+		"before_validate": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.before_validate",
+		"validate": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.validate",
+		"on_submit": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.on_submit",
+		"on_cancel": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.on_cancel",
+		"on_update_after_submit": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.on_update_after_submit",
+		"before_save": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.before_save",
+		"before_cancel": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.before_cancel",
+		"on_update": "brandmatch.doctype_triggers.accounting.sales_invoice.sales_invoice.on_update",
+	}}
+
+doctype_js = {
+	"Payment Entry" : "doctype_triggers/accounting/payment_entry/payment_entry.js",
+	"Purchase Invoice" : "doctype_triggers/accounting/purchase_invoice/purchase_invoice.js",
+	"Purchase Order" : "doctype_triggers/accounting/purchase_order/purchase_order.js",
+	"Sales Order" : "doctype_triggers/selling/sales_order/sales_order.js",
+	"Delivery Note" : "doctype_triggers/stock/delivery_note/delivery_note.js",
+	"Sales Invoice" : "doctype_triggers/accounting/sales_invoice/sales_invoice.js"
+}
 # required_apps = []
 
 # Includes in <head>
