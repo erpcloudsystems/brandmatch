@@ -14,6 +14,8 @@ def after_insert(doc, method=None):
 @frappe.whitelist()
 def onload(doc, method=None):
     pass
+
+
 @frappe.whitelist()
 def before_validate(doc, method=None):
     pass
@@ -68,3 +70,8 @@ def item_query(doctype, txt, searchfield, start, page_len, filters, as_dict=Fals
     results = [(item.get('item_code'), item.get('item_description', '')) for item in item_names]
     
     return results
+@frappe.whitelist()
+def customer_address(customer):
+    adresses = [parent["parent"] for parent in frappe.get_all("Dynamic Link", {"parenttype": "Address","link_doctype": "Customer","link_name":customer}, ["parent"])]
+    if adresses:
+        return adresses
